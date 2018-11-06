@@ -1,4 +1,7 @@
+require("dotenv").config();
 const express = require("express");
+const PORT = process.env.PORT || 3000;
+
 const app = express();
 const bodyParser = require("body-parser");
 
@@ -66,4 +69,4 @@ app.delete("/todos/", (req, res) => {
   res.send(todoList);
 });
 
-app.listen(3000, () => console.log("application running on port 3000"));
+app.listen(PORT, () => console.log(`application running on port ${PORT}`));
