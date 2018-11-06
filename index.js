@@ -26,7 +26,7 @@ app.get("/", (req, res) => {
 
 // Read
 app.get("/todos", (req, res) => {
-  res.send("todos");
+  res.send(todoList);
 });
 
 // Create
